@@ -1,0 +1,26 @@
+language: android
+
+android:
+    components:
+        - build-tools-23.0.1
+        - android-23
+        - extra-android-m2repository
+
+jdk:
+    - oraclejdk8
+
+after_success:
+    - .buildscript/deploy_snapshot.sh
+
+branches:
+    except:
+        - gh-pages
+
+notifications:
+    email: false
+
+sudo: false
+
+cache:
+    directories:
+        - $HOME/.gradle
