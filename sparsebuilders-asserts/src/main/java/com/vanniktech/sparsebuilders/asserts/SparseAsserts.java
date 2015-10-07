@@ -58,8 +58,9 @@ public final class SparseAsserts {
     /**
      * Asserts that {@link SparseArray} are equal. Equal is defined as same sizes. Plus same keys and values at each index.
      *
-     * @param expected expected SparseBooleanArray
-     * @param actual actual SparseBooleanArray
+     * @param expected expected SparseArray
+     * @param actual actual SparseArray
+     * @param <T> dynamic type t
      */
     public static <T> void assertSparseArrayEquals(final SparseArray<T> expected, final SparseArray<T> actual) {
         assertSizesEqual(expected.size(), actual.size());
