@@ -4,6 +4,20 @@ Builders for [SparseIntArray](http://developer.android.com/reference/android/uti
 
 As well as assert tools for asserting that [SparseIntArray](http://developer.android.com/reference/android/util/SparseIntArray.html), [SparseBooleanArray](http://developer.android.com/reference/android/util/SparseBooleanArray.html) and [SparseArray](http://developer.android.com/reference/android/util/SparseArray.html) are equal to each other.
 
+# Download
+
+sparsebuilders
+
+```groovy
+compile 'com.vanniktech:sparsebuilders:0.1.0'
+```
+
+sparsebuilders-asserts
+
+```groovy
+compile 'com.vanniktech:sparsebuilders-asserts:0.1.0'
+```
+
 # Proguard
 
 No configuration needed.
