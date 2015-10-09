@@ -1,5 +1,7 @@
 # SparseBuilders
 
+[![Build Status](https://travis-ci.org/vanniktech/SparseBuilders.svg)](https://travis-ci.org/vanniktech/SparseBuilders)
+
 Builders for [SparseIntArray](http://developer.android.com/reference/android/util/SparseIntArray.html), [SparseBooleanArray](http://developer.android.com/reference/android/util/SparseBooleanArray.html) and [SparseArray](http://developer.android.com/reference/android/util/SparseArray.html).
 
 As well as assert tools for asserting that [SparseIntArray](http://developer.android.com/reference/android/util/SparseIntArray.html), [SparseBooleanArray](http://developer.android.com/reference/android/util/SparseBooleanArray.html) and [SparseArray](http://developer.android.com/reference/android/util/SparseArray.html) are equal to each other.
