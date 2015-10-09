@@ -1,6 +1,7 @@
 # SparseBuilders
 
 [![Build Status](https://travis-ci.org/vanniktech/SparseBuilders.svg)](https://travis-ci.org/vanniktech/SparseBuilders)
+[![API](https://img.shields.io/badge/API-1%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=1)
 
 Builders for [SparseIntArray](http://developer.android.com/reference/android/util/SparseIntArray.html), [SparseBooleanArray](http://developer.android.com/reference/android/util/SparseBooleanArray.html) and [SparseArray](http://developer.android.com/reference/android/util/SparseArray.html).
 
