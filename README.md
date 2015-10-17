@@ -10,13 +10,13 @@ As well as assert tools for asserting that [SparseIntArray](http://developer.and
 
 # Download
 
-sparsebuilders | [Javadoc](sparsebuilders/javaDoc/release/index.html)
+sparsebuilders | [Javadoc](https://cdn.rawgit.com/vanniktech/SparseBuilders/master/sparsebuilders/javaDoc/release/index.html)
 
 ```groovy
 compile 'com.vanniktech:sparsebuilders:0.1.0'
 ```
 
-sparsebuilders-asserts | [Javadoc](sparsebuilders-asserts/javaDoc/release/index.html)
+sparsebuilders-asserts | [Javadoc](https://cdn.rawgit.com/vanniktech/SparseBuilders/master/sparsebuilders-asserts/javaDoc/release/index.html)
 
 ```groovy
 compile 'com.vanniktech:sparsebuilders-asserts:0.1.0'
