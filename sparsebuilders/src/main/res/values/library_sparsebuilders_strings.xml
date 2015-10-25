@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="define_sparsebuilders">year;owner</string>
+    <string name="library_sparsebuilders_author">Niklas Baudy</string>
+    <string name="library_sparsebuilders_libraryName">SparseBuilders</string>
+    <string name="library_sparsebuilders_libraryDescription">Builders for SparseIntArray, SparseBooleanArray and SparseArray.</string>
+    <string name="library_sparsebuilders_libraryVersion">0.1.0</string>
+    <string name="library_sparsebuilders_libraryWebsite">https://github.com/vanniktech/SparseBuilders</string>
+    <string name="library_sparsebuilders_licenseId">apache_2_0</string>
+    <string name="library_sparsebuilders_isOpenSource">true</string>
+    <string name="library_sparsebuilders_repositoryLink">https://github.com/vanniktech/SparseBuilders</string>
+    <!-- Custom variables section -->
+    <string name="library_sparsebuilders_owner">Niklas Baudy</string>
+    <string name="library_sparsebuilders_year">2015</string>
+</resources>
