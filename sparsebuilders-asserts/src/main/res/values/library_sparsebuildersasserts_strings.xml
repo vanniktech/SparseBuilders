@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="define_sparsebuildersasserts">year;owner</string>
+    <string name="library_sparsebuildersasserts_author">Niklas Baudy</string>
+    <string name="library_sparsebuildersasserts_libraryName">SparseBuilders Asserts</string>
+    <string name="library_sparsebuildersasserts_libraryDescription">Assert tools for asserting that SparseIntArray, SparseBooleanArray and SparseArray are equal to each other.</string>
+    <string name="library_sparsebuildersasserts_libraryVersion">0.1.0</string>
+    <string name="library_sparsebuildersasserts_libraryWebsite">https://github.com/vanniktech/SparseBuilders</string>
+    <string name="library_sparsebuildersasserts_licenseId">apache_2_0</string>
+    <string name="library_sparsebuildersasserts_isOpenSource">true</string>
+    <string name="library_sparsebuildersasserts_repositoryLink">https://github.com/vanniktech/SparseBuilders</string>
+    <!-- Custom variables section -->
+    <string name="library_sparsebuildersasserts_owner">Niklas Baudy</string>
+    <string name="library_sparsebuildersasserts_year">2015</string>
+</resources>
