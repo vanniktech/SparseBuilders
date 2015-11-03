@@ -1,20 +1,20 @@
 package com.vanniktech.sparsebuilders;
 
-import android.util.SparseIntArray;
+import static com.vanniktech.sparsebuilders.asserts.SparseAsserts.assertSparseIntArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-import static com.vanniktech.sparsebuilders.asserts.SparseAsserts.assertSparseIntArrayEquals;
-import static org.junit.Assert.assertEquals;
+import android.util.SparseIntArray;
 
 @Config(manifest = Config.NONE)
 @RunWith(RobolectricTestRunner.class)
 public class SparseIntArrayBuilderTest {
     @Test
-    public void testEmptyBuildShouldReturnEmpty() {
+    public void testConstructorEmptyBuildShouldReturnEmpty() {
         final SparseIntArray actual = new SparseIntArrayBuilder().build();
         final SparseIntArray expected = new SparseIntArray();
 
@@ -22,7 +22,15 @@ public class SparseIntArrayBuilderTest {
     }
 
     @Test
-    public void testFromShouldNotModifyParameter() {
+    public void testConstructor0CapacityBuildShouldReturnEmpty() {
+        final SparseIntArray actual = new SparseIntArrayBuilder(0).build();
+        final SparseIntArray expected = new SparseIntArray();
+
+        assertSparseIntArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorSparseIntArrayShouldNotModifyParameter() {
         final SparseIntArray fromParameter = new SparseIntArrayBuilder().put(23, 1).build();
 
         new SparseIntArrayBuilder(fromParameter).add(23, 2).put(3, 2).build();
@@ -33,7 +41,7 @@ public class SparseIntArrayBuilderTest {
     }
 
     @Test
-    public void testFromShouldProvideInitialized() {
+    public void testConstructorSparseIntArrayShouldProvideInitialized() {
         final SparseIntArray sparseIntArray = new SparseIntArrayBuilder().put(1, 1).put(2, 2).build();
         final SparseIntArray expectedSparseIntArray = new SparseIntArrayBuilder().put(1, 2).put(2, 2).put(3, 3).build();
         final SparseIntArray fromSparseIntArray = new SparseIntArrayBuilder(sparseIntArray).put(3, 3).add(1, 1).build();
