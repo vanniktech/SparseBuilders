@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(RobolectricTestRunner.class)
 public class SparseBooleanArrayBuilderTest {
     @Test
-    public void testEmptyBuildShouldReturnEmpty() {
+    public void testConstructorEmptyBuildShouldReturnEmpty() {
         final SparseBooleanArray actual = new SparseBooleanArrayBuilder().build();
         final SparseBooleanArray expected = new SparseBooleanArray();
 
@@ -22,7 +22,15 @@ public class SparseBooleanArrayBuilderTest {
     }
 
     @Test
-    public void testFromShouldProvideInitialized() {
+    public void testConstructor0CapacityBuildShouldReturnEmpty() {
+        final SparseBooleanArray actual = new SparseBooleanArrayBuilder().build();
+        final SparseBooleanArray expected = new SparseBooleanArray();
+
+        assertSparseBooleanArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorSparseBooleanArrayShouldProvideInitialized() {
         final SparseBooleanArray sparseBooleanArray = new SparseBooleanArrayBuilder().put(1, false).put(2, true).build();
         final SparseBooleanArray expectedSparseBooleanArray = new SparseBooleanArrayBuilder().put(1, false).put(2, true).put(3, true).build();
         final SparseBooleanArray fromSparseBooleanArray = new SparseBooleanArrayBuilder(sparseBooleanArray).put(3, true).build();

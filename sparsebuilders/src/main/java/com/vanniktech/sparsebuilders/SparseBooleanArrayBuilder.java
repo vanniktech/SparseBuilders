@@ -13,6 +13,13 @@ public class SparseBooleanArrayBuilder {
     }
 
     /**
+     * Constructs empty {@link SparseBooleanArray} with given capacity
+     */
+    public SparseBooleanArrayBuilder(final int capacity) {
+        mSparseBooleanArray = new SparseBooleanArray(capacity);
+    }
+
+    /**
      * Constructs initialized {@link SparseBooleanArray} with given sparseBooleanArray
      *
      * @param sparseBooleanArray sparseBooleanArray
