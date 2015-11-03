@@ -13,6 +13,13 @@ public class SparseArrayBuilder<T> {
     }
 
     /**
+     * Constructs empty {@link SparseArray} with given capacity
+     */
+    public SparseArrayBuilder(final int capacity) {
+        mSparseArray = new SparseArray<>(capacity);
+    }
+
+    /**
      * Constructs initialized {@link SparseArray} with given sparseArray
      * 
      * @param sparseArray sparseArray

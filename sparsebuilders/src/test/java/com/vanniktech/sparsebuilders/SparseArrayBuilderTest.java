@@ -24,6 +24,14 @@ public class SparseArrayBuilderTest {
     }
 
     @Test
+    public void testConstructor0CapacityBuildShouldReturnEmpty() {
+        final SparseArray<String> actual = new SparseArrayBuilder<String>(0).build();
+        final SparseArray<String> expected = new SparseArray<>();
+
+        assertSparseArrayEquals(expected, actual);
+    }
+
+    @Test
     public void testConstructorValueShouldNotModifyParameter() {
         final Date first = new Date(1);
 
@@ -37,7 +45,7 @@ public class SparseArrayBuilderTest {
     }
 
     @Test
-    public void testFromShouldProvideInitialized() {
+    public void testConstructorSparseArrayShouldProvideInitialized() {
         final Date first = new Date(43);
         final Date second = new Date(39);
         final Date third = new Date(8);
