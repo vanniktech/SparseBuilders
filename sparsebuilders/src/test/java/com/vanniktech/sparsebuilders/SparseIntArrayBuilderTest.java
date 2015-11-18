@@ -33,6 +33,7 @@ public class SparseIntArrayBuilderTest {
     public void testConstructorSparseIntArrayShouldNotModifyParameter() {
         final SparseIntArray fromParameter = new SparseIntArrayBuilder().put(23, 1).build();
 
+        // noinspection ResourceType
         new SparseIntArrayBuilder(fromParameter).add(23, 2).put(3, 2).build();
 
         assertEquals(1, fromParameter.size());
