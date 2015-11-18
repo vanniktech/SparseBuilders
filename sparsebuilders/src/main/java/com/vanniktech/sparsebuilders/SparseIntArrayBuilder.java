@@ -1,5 +1,6 @@
 package com.vanniktech.sparsebuilders;
 
+import android.support.annotation.CheckResult;
 import android.util.SparseIntArray;
 
 public class SparseIntArrayBuilder {
@@ -78,6 +79,7 @@ public class SparseIntArrayBuilder {
     /**
      * @return built {@link SparseIntArray}
      */
+    @CheckResult
     public SparseIntArray build() {
         return mSparseIntArray;
     }

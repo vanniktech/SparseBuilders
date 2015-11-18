@@ -37,6 +37,7 @@ public class SparseArrayBuilderTest {
 
         final SparseArray<Date> fromParameter = new SparseArrayBuilder<Date>().put(340, first).build();
 
+        // noinspection ResourceType
         new SparseArrayBuilder<>(fromParameter).put(3, new Date(1)).build();
 
         assertEquals(1, fromParameter.size());

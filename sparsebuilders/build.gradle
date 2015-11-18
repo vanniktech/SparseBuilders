@@ -26,6 +26,8 @@ android {
 }
 
 dependencies {
+    compile rootProject.ext.supportAnnotations
+
     testCompile project(':sparsebuilders-asserts')
 
     testCompile rootProject.ext.junit

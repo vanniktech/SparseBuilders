@@ -1,5 +1,6 @@
 package com.vanniktech.sparsebuilders;
 
+import android.support.annotation.CheckResult;
 import android.util.SparseBooleanArray;
 
 public class SparseBooleanArrayBuilder {
@@ -47,6 +48,7 @@ public class SparseBooleanArrayBuilder {
     /**
      * @return built {@link SparseBooleanArray}
      */
+    @CheckResult
     public SparseBooleanArray build() {
         return mSparseBooleanArray;
     }

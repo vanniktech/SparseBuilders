@@ -39,6 +39,8 @@ ext {
     junit = 'junit:junit:4.12'
     robolectric = 'org.robolectric:robolectric:3.0'
 
+    supportAnnotations = 'com.android.support:support-annotations:23.1.1'
+
     javaVersion = JavaVersion.VERSION_1_7
 }
 
