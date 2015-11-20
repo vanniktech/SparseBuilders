@@ -14,13 +14,17 @@ sparsebuilders | [Javadoc](https://cdn.rawgit.com/vanniktech/SparseBuilders/mast
 
 ```groovy
 compile 'com.vanniktech:sparsebuilders:0.1.0'
+compile 'com.vanniktech:sparsebuilders:0.2.0-SNAPSHOT'
 ```
 
 sparsebuilders-asserts | [Javadoc](https://cdn.rawgit.com/vanniktech/SparseBuilders/master/sparsebuilders-asserts/javaDoc/release/index.html)
 
 ```groovy
 compile 'com.vanniktech:sparsebuilders-asserts:0.1.0'
+compile 'com.vanniktech:sparsebuilders-asserts:0.2.0-SNAPSHOT'
 ```
+
+Modules are located on [Maven Central](https://oss.sonatype.org/#nexus-search;quick~sparsebuilders).
 
 # Proguard
 
