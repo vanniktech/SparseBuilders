@@ -32,15 +32,17 @@ ext {
     compileSdkVersion = 23
     buildToolsVersion = '23.0.1'
 
+    supportLibraryVersion = '23.1.1'
+
     junit = 'junit:junit:4.12'
     robolectric = 'org.robolectric:robolectric:3.0'
 
-    supportAnnotations = 'com.android.support:support-annotations:23.1.1'
+    supportAnnotations = "com.android.support:support-annotations:$supportLibraryVersion"
 
     javaVersion = JavaVersion.VERSION_1_7
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.8'
-    distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
+    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
 }

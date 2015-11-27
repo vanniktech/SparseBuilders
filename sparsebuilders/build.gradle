@@ -2,16 +2,16 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.vanniktech.android.javadoc'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion as int
+    buildToolsVersion rootProject.ext.buildToolsVersion as String
 
     compileOptions {
-        sourceCompatibility rootProject.ext.javaVersion
-        targetCompatibility rootProject.ext.javaVersion
+        sourceCompatibility rootProject.ext.javaVersion as JavaVersion
+        targetCompatibility rootProject.ext.javaVersion as JavaVersion
     }
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion rootProject.ext.minSdkVersion as int
     }
 
     buildTypes {
