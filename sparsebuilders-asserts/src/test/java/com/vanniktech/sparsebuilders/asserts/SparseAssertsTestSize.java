@@ -16,8 +16,7 @@ import java.util.Date;
 @Config(manifest = Config.NONE)
 @RunWith(RobolectricTestRunner.class)
 public class SparseAssertsTestSize {
-    @Rule
-    public final ExpectedException expectedException = ExpectedException.none();
+    @Rule public final ExpectedException expectedException = ExpectedException.none();
 
     @Test
     public void testAssertSparseIntArrayEquals() {
