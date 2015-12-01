@@ -1,10 +1,12 @@
 package com.vanniktech.sparsebuilders;
 
 import android.support.annotation.CheckResult;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.SparseIntArray;
 
 public class SparseIntArrayBuilder {
-    private final SparseIntArray mSparseIntArray;
+    @NonNull private final SparseIntArray mSparseIntArray;
 
     /**
      * Constructs empty {@link SparseIntArray}
@@ -25,7 +27,7 @@ public class SparseIntArrayBuilder {
      *
      * @param sparseIntArray sparseIntArray
      */
-    public SparseIntArrayBuilder(final SparseIntArray sparseIntArray) {
+    public SparseIntArrayBuilder(@NonNull final SparseIntArray sparseIntArray) {
         mSparseIntArray = new SparseIntArray(sparseIntArray.size());
 
         for (int i = 0; i < sparseIntArray.size(); i++) {
@@ -63,7 +65,7 @@ public class SparseIntArrayBuilder {
      * @param sparseIntArray sparseIntArray
      * @return {@link SparseIntArrayBuilder} for chaining
      */
-    public SparseIntArrayBuilder add(final SparseIntArray sparseIntArray) {
+    public SparseIntArrayBuilder add(@Nullable final SparseIntArray sparseIntArray) {
         if (sparseIntArray != null) {
             for (int i = 0; i < sparseIntArray.size(); i++) {
                 final int key = sparseIntArray.keyAt(i);
@@ -79,6 +81,7 @@ public class SparseIntArrayBuilder {
     /**
      * @return built {@link SparseIntArray}
      */
+    @NonNull
     @CheckResult
     public SparseIntArray build() {
         return mSparseIntArray;

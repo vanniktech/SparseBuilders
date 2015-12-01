@@ -1,5 +1,6 @@
 package com.vanniktech.sparsebuilders.asserts;
 
+import android.support.annotation.NonNull;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
@@ -17,7 +18,7 @@ public final class SparseAsserts {
      * @param expected expected SparseIntArray
      * @param actual actual SparseIntArray
      */
-    public static void assertSparseIntArrayEquals(final SparseIntArray expected, final SparseIntArray actual) {
+    public static void assertSparseIntArrayEquals(@NonNull final SparseIntArray expected, @NonNull final SparseIntArray actual) {
         assertSizesEqual(expected.size(), actual.size());
 
         for (int i = 0; i < expected.size(); i++) {
@@ -39,7 +40,7 @@ public final class SparseAsserts {
      * @param expected expected SparseBooleanArray
      * @param actual actual SparseBooleanArray
      */
-    public static void assertSparseBooleanArrayEquals(final SparseBooleanArray expected, final SparseBooleanArray actual) {
+    public static void assertSparseBooleanArrayEquals(@NonNull final SparseBooleanArray expected, @NonNull final SparseBooleanArray actual) {
         assertSizesEqual(expected.size(), actual.size());
 
         for (int i = 0; i < expected.size(); i++) {
@@ -62,7 +63,7 @@ public final class SparseAsserts {
      * @param actual actual SparseArray
      * @param <T> dynamic type t
      */
-    public static <T> void assertSparseArrayEquals(final SparseArray<T> expected, final SparseArray<T> actual) {
+    public static <T> void assertSparseArrayEquals(@NonNull final SparseArray<T> expected, @NonNull final SparseArray<T> actual) {
         assertSizesEqual(expected.size(), actual.size());
 
         for (int i = 0; i < expected.size(); i++) {

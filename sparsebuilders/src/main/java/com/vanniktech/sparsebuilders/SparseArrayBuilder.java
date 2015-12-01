@@ -1,10 +1,11 @@
 package com.vanniktech.sparsebuilders;
 
 import android.support.annotation.CheckResult;
+import android.support.annotation.NonNull;
 import android.util.SparseArray;
 
 public class SparseArrayBuilder<T> {
-    private final SparseArray<T> mSparseArray;
+    @NonNull private final SparseArray<T> mSparseArray;
 
     /**
      * Constructs empty {@link SparseArray}
@@ -25,7 +26,7 @@ public class SparseArrayBuilder<T> {
      * 
      * @param sparseArray sparseArray
      */
-    public SparseArrayBuilder(final SparseArray<T> sparseArray) {
+    public SparseArrayBuilder(@NonNull final SparseArray<T> sparseArray) {
         mSparseArray = new SparseArray<>();
 
         for (int i = 0; i < sparseArray.size(); i++) {
@@ -48,6 +49,7 @@ public class SparseArrayBuilder<T> {
     /**
      * @return built {@link SparseArray}
      */
+    @NonNull
     @CheckResult
     public SparseArray<T> build() {
         return mSparseArray;
