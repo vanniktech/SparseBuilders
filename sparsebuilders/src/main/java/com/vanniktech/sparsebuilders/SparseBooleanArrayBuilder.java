@@ -1,10 +1,11 @@
 package com.vanniktech.sparsebuilders;
 
 import android.support.annotation.CheckResult;
+import android.support.annotation.NonNull;
 import android.util.SparseBooleanArray;
 
 public class SparseBooleanArrayBuilder {
-    private final SparseBooleanArray mSparseBooleanArray;
+    @NonNull private final SparseBooleanArray mSparseBooleanArray;
 
     /**
      * Constructs empty {@link SparseBooleanArray}
@@ -25,7 +26,7 @@ public class SparseBooleanArrayBuilder {
      *
      * @param sparseBooleanArray sparseBooleanArray
      */
-    public SparseBooleanArrayBuilder(final SparseBooleanArray sparseBooleanArray) {
+    public SparseBooleanArrayBuilder(@NonNull final SparseBooleanArray sparseBooleanArray) {
         mSparseBooleanArray = new SparseBooleanArray(sparseBooleanArray.size());
 
         for (int i = 0; i < sparseBooleanArray.size(); i++) {
@@ -48,6 +49,7 @@ public class SparseBooleanArrayBuilder {
     /**
      * @return built {@link SparseBooleanArray}
      */
+    @NonNull
     @CheckResult
     public SparseBooleanArray build() {
         return mSparseBooleanArray;

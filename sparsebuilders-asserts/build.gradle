@@ -27,6 +27,8 @@ android {
 }
 
 dependencies {
+    compile rootProject.ext.supportAnnotations
+
     provided rootProject.ext.junit
 
     testCompile rootProject.ext.junit
