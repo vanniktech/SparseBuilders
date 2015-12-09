@@ -1,17 +1,20 @@
 package com.vanniktech.sparsebuilders;
 
-import static com.vanniktech.sparsebuilders.asserts.SparseAsserts.assertSparseIntArrayEquals;
-import static org.junit.Assert.assertEquals;
+import android.util.SparseIntArray;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-import android.util.SparseIntArray;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
+import static com.vanniktech.sparsebuilders.asserts.SparseAsserts.assertSparseIntArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 @Config(manifest = Config.NONE)
 @RunWith(RobolectricTestRunner.class)
+@SuppressWarnings("checkstyle:magicnumber")
 public class SparseIntArrayBuilderTest {
     @Test
     public void testConstructorEmptyBuildShouldReturnEmpty() {
@@ -30,6 +33,7 @@ public class SparseIntArrayBuilderTest {
     }
 
     @Test
+    @SuppressFBWarnings(value = "RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT", justification = "Just a test")
     public void testConstructorSparseIntArrayShouldNotModifyParameter() {
         final SparseIntArray fromParameter = new SparseIntArrayBuilder().put(23, 1).build();
 

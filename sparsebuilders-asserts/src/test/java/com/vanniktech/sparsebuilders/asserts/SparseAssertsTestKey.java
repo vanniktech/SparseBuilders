@@ -15,6 +15,7 @@ import java.util.Date;
 
 @Config(manifest = Config.NONE)
 @RunWith(RobolectricTestRunner.class)
+@SuppressWarnings("checkstyle:magicnumber")
 public class SparseAssertsTestKey {
     @Rule public final ExpectedException expectedException = ExpectedException.none();
 

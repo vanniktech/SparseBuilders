@@ -9,11 +9,14 @@ import org.robolectric.annotation.Config;
 
 import java.util.Date;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import static com.vanniktech.sparsebuilders.asserts.SparseAsserts.assertSparseArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 @Config(manifest = Config.NONE)
 @RunWith(RobolectricTestRunner.class)
+@SuppressWarnings("checkstyle:magicnumber")
 public class SparseArrayBuilderTest {
     @Test
     public void testConstructorEmptyBuildShouldReturnEmpty() {
@@ -32,6 +35,7 @@ public class SparseArrayBuilderTest {
     }
 
     @Test
+    @SuppressFBWarnings(value = "RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT", justification = "Just a test")
     public void testConstructorValueShouldNotModifyParameter() {
         final Date first = new Date(1);
 

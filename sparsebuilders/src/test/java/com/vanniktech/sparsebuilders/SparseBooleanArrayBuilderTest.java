@@ -12,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 @Config(manifest = Config.NONE)
 @RunWith(RobolectricTestRunner.class)
+@SuppressWarnings("checkstyle:magicnumber")
 public class SparseBooleanArrayBuilderTest {
     @Test
     public void testConstructorEmptyBuildShouldReturnEmpty() {
