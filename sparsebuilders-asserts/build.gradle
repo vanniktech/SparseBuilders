@@ -22,7 +22,10 @@ android {
     }
 
     lintOptions {
-        ignore 'InvalidPackage' // junit seems to throw that one
+        warningsAsErrors true
+        abortOnError true
+        textReport true
+        textOutput 'stdout'
     }
 }
 
