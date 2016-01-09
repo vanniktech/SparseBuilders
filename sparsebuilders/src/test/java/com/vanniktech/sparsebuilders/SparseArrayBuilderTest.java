@@ -77,4 +77,9 @@ public class SparseArrayBuilderTest {
         assertEquals(8, sparseArray.keyAt(1));
         assertEquals(second, sparseArray.valueAt(1));
     }
+
+    @Test
+    public void testClear() {
+        assertEquals(0, new SparseArrayBuilder<Integer>().put(5, 3).clear().build().size());
+    }
 }

@@ -51,4 +51,9 @@ public class SparseBooleanArrayBuilderTest {
         assertEquals(8, sparseBooleanArray.keyAt(1));
         assertEquals(false, sparseBooleanArray.valueAt(1));
     }
+
+    @Test
+    public void testClear() {
+        assertEquals(0, new SparseBooleanArrayBuilder().put(5, true).clear().build().size());
+    }
 }

@@ -47,6 +47,16 @@ public class SparseBooleanArrayBuilder {
     }
 
     /**
+     * Clears the internal {@link SparseBooleanArray}
+     *
+     * @return {@link SparseBooleanArrayBuilder} for chaining
+     */
+    public SparseBooleanArrayBuilder clear() {
+        mSparseBooleanArray.clear();
+        return this;
+    }
+
+    /**
      * @return built {@link SparseBooleanArray}
      */
     @NonNull

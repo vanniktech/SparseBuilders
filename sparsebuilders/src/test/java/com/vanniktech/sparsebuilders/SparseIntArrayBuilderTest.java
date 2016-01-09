@@ -108,4 +108,9 @@ public class SparseIntArrayBuilderTest {
         assertEquals(5, sparseIntArray.keyAt(0));
         assertEquals(1, sparseIntArray.valueAt(0));
     }
+
+    @Test
+    public void testClear() {
+        assertEquals(0, new SparseIntArrayBuilder().put(5, 3).clear().build().size());
+    }
 }

@@ -79,6 +79,16 @@ public class SparseIntArrayBuilder {
     }
 
     /**
+     * Clears the internal {@link SparseIntArray}
+     *
+     * @return {@link SparseIntArrayBuilder} for chaining
+     */
+    public SparseIntArrayBuilder clear() {
+        mSparseIntArray.clear();
+        return this;
+    }
+
+    /**
      * @return built {@link SparseIntArray}
      */
     @NonNull
