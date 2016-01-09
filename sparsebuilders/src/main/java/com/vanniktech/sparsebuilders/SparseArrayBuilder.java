@@ -47,6 +47,16 @@ public class SparseArrayBuilder<T> {
     }
 
     /**
+     * Clears the internal {@link SparseArray}
+     *
+     * @return {@link SparseArrayBuilder} for chaining
+     */
+    public SparseArrayBuilder<T> clear() {
+        mSparseArray.clear();
+        return this;
+    }
+
+    /**
      * @return built {@link SparseArray}
      */
     @NonNull
