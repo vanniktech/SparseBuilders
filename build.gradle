@@ -13,9 +13,15 @@ buildscript {
         classpath 'gradle.plugin.com.vanniktech:gradle-android-junit-jacoco-plugin:0.1.0'
 
         classpath 'com.android.tools.build:gradle:1.5.0'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.12.0'
         classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.8'
-        classpath 'com.vanniktech:gradle-code-quality-tools-plugin:0.1.0'
+        classpath 'com.vanniktech:gradle-code-quality-tools-plugin:0.2.0'
+    }
+}
+
+codeQualityTools {
+    lint {
+        textReport true
     }
 }
 
