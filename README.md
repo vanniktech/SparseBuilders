@@ -1,6 +1,6 @@
 # SparseBuilders
 
-[![Build Status](https://travis-ci.org/vanniktech/SparseBuilders.svg)](https://travis-ci.org/vanniktech/SparseBuilders)
+[![Build Status](https://travis-ci.org/vanniktech/SparseBuilders.svg?branch=master)](https://travis-ci.org/vanniktech/SparseBuilders?branch=master)
 [![API](https://img.shields.io/badge/API-1%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=1)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
