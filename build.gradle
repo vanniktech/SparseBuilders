@@ -41,7 +41,7 @@ ext {
     compileSdkVersion = 23
     buildToolsVersion = '23.0.2'
 
-    supportLibraryVersion = '23.2.0'
+    supportLibraryVersion = '23.2.1'
 
     junit = 'junit:junit:4.12'
     robolectric = 'org.robolectric:robolectric:3.0'
