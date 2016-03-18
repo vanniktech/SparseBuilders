@@ -15,9 +15,12 @@ licenses:
 jdk:
     - oraclejdk8
 
+before_install:
+    - pip install --user codecov
+
 install: true
 
-script: ./gradlew clean build
+script: ./gradlew clean build jacocoReport
 
 after_success:
     - .buildscript/deploy_snapshot.sh
@@ -30,6 +33,9 @@ env:
 branches:
     except:
         - gh-pages
+
+after_success:
+    - codecov
 
 notifications:
     email: false
