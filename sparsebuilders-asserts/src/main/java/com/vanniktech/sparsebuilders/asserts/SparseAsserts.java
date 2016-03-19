@@ -11,10 +11,6 @@ import android.util.SparseIntArray;
 import org.junit.Assert;
 
 public final class SparseAsserts {
-    private SparseAsserts() {
-        throw new AssertionError("No instances.");
-    }
-
     /**
      * Asserts that {@link SparseIntArray} are equal. Equal is defined either as same sizes, same keys and values at each index or if both are null.
      *
@@ -108,5 +104,9 @@ public final class SparseAsserts {
 
         assertNotNull("Expected non null but was null", actual);
         return false;
+    }
+
+    private SparseAsserts() {
+        throw new AssertionError("No instances.");
     }
 }

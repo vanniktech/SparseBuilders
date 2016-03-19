@@ -29,6 +29,7 @@ dependencies {
 
     testCompile rootProject.ext.junit
     testCompile rootProject.ext.robolectric
+    testCompile rootProject.ext.privateConstructor
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
