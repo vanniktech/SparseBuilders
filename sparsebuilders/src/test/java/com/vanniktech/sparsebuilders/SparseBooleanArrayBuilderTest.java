@@ -24,7 +24,7 @@ public class SparseBooleanArrayBuilderTest {
 
     @Test
     public void testConstructor0CapacityBuildShouldReturnEmpty() {
-        final SparseBooleanArray actual = new SparseBooleanArrayBuilder().build();
+        final SparseBooleanArray actual = new SparseBooleanArrayBuilder(0).build();
         final SparseBooleanArray expected = new SparseBooleanArray();
 
         assertSparseBooleanArrayEquals(expected, actual);
