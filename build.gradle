@@ -44,7 +44,7 @@ ext {
     supportLibraryVersion = '23.2.1'
 
     junit = 'junit:junit:4.12'
-    robolectric = 'org.robolectric:robolectric:3.0'
+    robolectric = 'org.robolectric:robolectric:3.1'
     privateConstructor = 'com.pushtorefresh.java-private-constructor-checker:checker:1.2.0'
 
     supportAnnotations = "com.android.support:support-annotations:$supportLibraryVersion"
