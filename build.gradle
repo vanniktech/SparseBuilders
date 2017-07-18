@@ -6,16 +6,16 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        google()
         maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
         classpath 'com.vanniktech:gradle-android-javadoc-plugin:0.2.1'
-        classpath 'com.vanniktech:gradle-android-junit-jacoco-plugin:0.3.0'
-        classpath 'com.vanniktech:gradle-code-quality-tools-plugin:0.4.0'
+        classpath 'com.vanniktech:gradle-android-junit-jacoco-plugin:0.6.0'
+        classpath 'com.vanniktech:gradle-code-quality-tools-plugin:0.6.0'
 
-        classpath 'com.android.tools.build:gradle:2.1.0'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.13.0'
-        classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.8'
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
     }
 }
 
@@ -23,25 +23,27 @@ codeQualityTools {
     lint {
         textReport true
     }
+    cpd {
+        ignoreFailures = true
+    }
 }
 
 subprojects {
     repositories {
         jcenter()
+        google()
     }
 
     group = GROUP
     version = VERSION_NAME
-
-    plugins.apply('net.ltgt.errorprone')
 }
 
 ext {
     minSdkVersion = 1
-    compileSdkVersion = 23
-    buildToolsVersion = '23.0.2'
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.3'
 
-    supportLibraryVersion = '23.2.1'
+    supportLibraryVersion = '25.4.0'
 
     junit = 'junit:junit:4.12'
     robolectric = 'org.robolectric:robolectric:3.1.2'
@@ -54,6 +56,6 @@ ext {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.13'
-    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+  gradleVersion = '4.0'
+  distributionType = Wrapper.DistributionType.ALL
 }

@@ -1,0 +1,17 @@
+failFast: true
+
+potential-bugs:
+  LateinitUsage:
+    excludeAnnotatedProperties: "javax.inject.Inject,org.mockito.Mock,org.mockito.Captor"
+
+style:
+  MaxLineLength:
+    active: false
+  NamingConventionViolation:
+    classPattern: '[A-Z$][a-zA-Z0-9$]*'
+
+comments:
+  CommentOverPrivateMethod:
+    active: false # We actually like this.
+  UndocumentedPublicFunction:
+    active: false
