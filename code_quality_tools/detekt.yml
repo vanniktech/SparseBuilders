@@ -2,7 +2,7 @@ failFast: true
 
 potential-bugs:
   LateinitUsage:
-    excludeAnnotatedProperties: "javax.inject.Inject,org.mockito.Mock,org.mockito.Captor"
+    excludeAnnotatedProperties: "javax.inject.*,org.mockito.*,butterknife.*"
 
 style:
   MaxLineLength:
@@ -15,3 +15,7 @@ comments:
     active: false # We actually like this.
   UndocumentedPublicFunction:
     active: false
+
+complexity:
+  TooManyFunctions:
+    threshold: 30
