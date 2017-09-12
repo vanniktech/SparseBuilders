@@ -11,7 +11,7 @@ buildscript {
   }
   dependencies {
     classpath 'com.vanniktech:gradle-android-javadoc-plugin:0.2.1'
-    classpath 'com.vanniktech:gradle-android-junit-jacoco-plugin:0.8.0'
+    classpath 'com.vanniktech:gradle-android-junit-jacoco-plugin:0.9.0'
     classpath 'com.vanniktech:gradle-code-quality-tools-plugin:0.8.0'
 
     classpath 'com.android.tools.build:gradle:2.3.3'
