@@ -1,39 +1,38 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.vanniktech.android.javadoc'
 
 afterEvaluate {
   generateReleaseBuildConfig.enabled = false
 }
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion as int
-    buildToolsVersion rootProject.ext.buildToolsVersion as String
+  compileSdkVersion rootProject.ext.compileSdkVersion as int
 
-    compileOptions {
-        sourceCompatibility rootProject.ext.javaVersion as JavaVersion
-        targetCompatibility rootProject.ext.javaVersion as JavaVersion
-    }
+  defaultConfig {
+    minSdkVersion rootProject.ext.minSdkVersion as int
+  }
 
-    defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion as int
-    }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
+  }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+  }
 }
 
 dependencies {
-    compile rootProject.ext.supportAnnotations
+  api rootProject.ext.supportAnnotations
 
-    provided rootProject.ext.junit
+  implementation rootProject.ext.junit
 
-    testCompile rootProject.ext.junit
-    testCompile rootProject.ext.robolectric
-    testCompile rootProject.ext.privateConstructor
+  testImplementation rootProject.ext.junit
+  testImplementation rootProject.ext.assertj3
+  testImplementation rootProject.ext.robolectric
+  testImplementation rootProject.ext.privateConstructor
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

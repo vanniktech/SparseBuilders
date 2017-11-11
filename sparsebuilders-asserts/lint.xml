@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
-    <!-- JUnit seems to throw that one since it does reference it -->
-    <issue id="InvalidPackage">
-        <ignore regexp="java.lang.management"/>
-    </issue>
+  <!-- JUnit seems to throw that one since it does reference it -->
+  <issue id="InvalidPackage">
+    <ignore regexp="java.lang.management"/>
+  </issue>
 
-    <issue id="UnusedResources">
-        <ignore regexp="library_sparsebuildersasserts_strings.xml"/>
-    </issue>
+  <issue id="UnusedResources">
+    <ignore regexp="library_sparsebuildersasserts_strings.xml"/>
+  </issue>
 </lint>

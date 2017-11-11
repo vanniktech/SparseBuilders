@@ -10,30 +10,29 @@ buildscript {
     maven { url 'https://plugins.gradle.org/m2/' }
   }
   dependencies {
-    classpath 'com.vanniktech:gradle-android-javadoc-plugin:0.2.1'
-    classpath 'com.vanniktech:gradle-android-junit-jacoco-plugin:0.9.0'
+    classpath 'com.vanniktech:gradle-android-junit-jacoco-plugin:0.10.0'
     classpath 'com.vanniktech:gradle-code-quality-tools-plugin:0.8.0'
 
-    classpath 'com.android.tools.build:gradle:2.3.3'
-    classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
+    classpath 'com.android.tools.build:gradle:3.0.0'
+    classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
   }
 }
 
 codeQualityTools {
   checkstyle {
-    toolVersion = '8.1'
+    toolVersion = '8.4'
   }
   pmd {
     toolVersion = '5.8.1'
   }
   detekt {
-    toolVersion = '1.0.0.M13.2'
+    toolVersion = '1.0.0.RC5-3'
   }
   ktlint {
-    toolVersion = '0.9.1'
+    toolVersion = '0.12.0'
   }
   errorProne {
-    toolVersion = '2.0.21'
+    toolVersion = '2.1.2'
   }
   cpd {
     ignoreFailures = true // Fix in follow up.
@@ -56,22 +55,19 @@ subprojects {
 
 ext {
   minSdkVersion = 1
-  compileSdkVersion = 26
-  buildToolsVersion = '26.0.1'
+  compileSdkVersion = 27
 
-  supportLibraryVersion = '26.0.1'
+  supportLibraryVersion = '27.0.1'
 
   junit = 'junit:junit:4.12'
-  robolectric = 'org.robolectric:robolectric:3.4.2'
+  robolectric = 'org.robolectric:robolectric:3.5.1'
+  assertj3 = 'org.assertj:assertj-core:3.8.0'
   privateConstructor = 'com.pushtorefresh.java-private-constructor-checker:checker:1.2.0'
 
   supportAnnotations = "com.android.support:support-annotations:$supportLibraryVersion"
-  findbugsannotations = 'com.google.code.findbugs:annotations:3.0.1'
-
-  javaVersion = JavaVersion.VERSION_1_7
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '4.1'
+  gradleVersion = '4.3'
   distributionType = Wrapper.DistributionType.ALL
 }
