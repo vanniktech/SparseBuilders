@@ -5,8 +5,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 
+import static org.assertj.core.api.Java6Assertions.assertThat;
 import static com.vanniktech.sparsebuilders.asserts.SparseAsserts.assertSparseIntArrayEquals;
-import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class) public class SparseIntArrayBuilderTest {
   @Test public void constructorEmptyBuildShouldReturnEmpty() {
@@ -28,9 +28,9 @@ import static org.junit.Assert.assertEquals;
 
     new SparseIntArrayBuilder(fromParameter).add(23, 2).put(3, 2).build();
 
-    assertEquals(1, fromParameter.size());
-    assertEquals(23, fromParameter.keyAt(0));
-    assertEquals(1, fromParameter.valueAt(0));
+    assertThat(fromParameter.size()).isEqualTo(1);
+    assertThat(fromParameter.keyAt(0)).isEqualTo(23);
+    assertThat(fromParameter.valueAt(0)).isEqualTo(1);
   }
 
   @Test public void constructorSparseIntArrayShouldProvideInitialized() {
@@ -44,25 +44,25 @@ import static org.junit.Assert.assertEquals;
   @Test public void putShouldPut() {
     final SparseIntArray sparseIntArray = new SparseIntArrayBuilder().put(5, 10).put(8, 2).build();
 
-    assertEquals(2, sparseIntArray.size());
+    assertThat(sparseIntArray.size()).isEqualTo(2);
 
-    assertEquals(5, sparseIntArray.keyAt(0));
-    assertEquals(10, sparseIntArray.valueAt(0));
+    assertThat(sparseIntArray.keyAt(0)).isEqualTo(5);
+    assertThat(sparseIntArray.valueAt(0)).isEqualTo(10);
 
-    assertEquals(8, sparseIntArray.keyAt(1));
-    assertEquals(2, sparseIntArray.valueAt(1));
+    assertThat(sparseIntArray.keyAt(1)).isEqualTo(8);
+    assertThat(sparseIntArray.valueAt(1)).isEqualTo(2);
   }
 
   @Test public void addShouldAdd() {
     final SparseIntArray sparseIntArray = new SparseIntArrayBuilder().add(5, 10).add(5, 2).add(3, 10).build();
 
-    assertEquals(2, sparseIntArray.size());
+    assertThat(sparseIntArray.size()).isEqualTo(2);
 
-    assertEquals(3, sparseIntArray.keyAt(0));
-    assertEquals(10, sparseIntArray.valueAt(0));
+    assertThat(sparseIntArray.keyAt(0)).isEqualTo(3);
+    assertThat(sparseIntArray.valueAt(0)).isEqualTo(10);
 
-    assertEquals(5, sparseIntArray.keyAt(1));
-    assertEquals(12, sparseIntArray.valueAt(1));
+    assertThat(sparseIntArray.keyAt(1)).isEqualTo(5);
+    assertThat(sparseIntArray.valueAt(1)).isEqualTo(12);
   }
 
   @Test public void addSparseIntArrayShouldAdd() {
@@ -80,22 +80,22 @@ import static org.junit.Assert.assertEquals;
   @Test public void addNullSparseIntArrayShouldDoNothing() {
     final SparseIntArray sparseIntArray = new SparseIntArrayBuilder().put(0, 0).add(null).build();
 
-    assertEquals(1, sparseIntArray.size());
+    assertThat(sparseIntArray.size()).isEqualTo(1);
 
-    assertEquals(0, sparseIntArray.keyAt(0));
-    assertEquals(0, sparseIntArray.valueAt(0));
+    assertThat(sparseIntArray.keyAt(0)).isEqualTo(0);
+    assertThat(sparseIntArray.valueAt(0)).isEqualTo(0);
   }
 
   @Test public void putShouldOverrideAdd() {
     final SparseIntArray sparseIntArray = new SparseIntArrayBuilder().add(5, 10).add(5, 2).put(5, 1).build();
 
-    assertEquals(1, sparseIntArray.size());
+    assertThat(sparseIntArray.size()).isEqualTo(1);
 
-    assertEquals(5, sparseIntArray.keyAt(0));
-    assertEquals(1, sparseIntArray.valueAt(0));
+    assertThat(sparseIntArray.keyAt(0)).isEqualTo(5);
+    assertThat(sparseIntArray.valueAt(0)).isEqualTo(1);
   }
 
   @Test public void clear() {
-    assertEquals(0, new SparseIntArrayBuilder().put(5, 3).clear().build().size());
+    assertThat(new SparseIntArrayBuilder().put(5, 3).clear().build().size()).isEqualTo(0);
   }
 }
