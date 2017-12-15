@@ -5,10 +5,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 
+import static org.assertj.core.api.Java6Assertions.assertThat;
 import static com.vanniktech.sparsebuilders.asserts.SparseAsserts.assertSparseBooleanArrayEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class) public class SparseBooleanArrayBuilderTest {
   @Test public void constructorEmptyBuildShouldReturnEmpty() {
@@ -36,16 +34,16 @@ import static org.junit.Assert.assertTrue;
   @Test public void putShouldPut() {
     final SparseBooleanArray sparseBooleanArray = new SparseBooleanArrayBuilder().put(5, true).put(8, false).build();
 
-    assertEquals(2, sparseBooleanArray.size());
+    assertThat(sparseBooleanArray.size()).isEqualTo(2);
 
-    assertEquals(5, sparseBooleanArray.keyAt(0));
-    assertTrue(sparseBooleanArray.valueAt(0));
+    assertThat(sparseBooleanArray.keyAt(0)).isEqualTo(5);
+    assertThat(sparseBooleanArray.valueAt(0)).isTrue();
 
-    assertEquals(8, sparseBooleanArray.keyAt(1));
-    assertFalse(sparseBooleanArray.valueAt(1));
+    assertThat(sparseBooleanArray.keyAt(1)).isEqualTo(8);
+    assertThat(sparseBooleanArray.valueAt(1)).isFalse();
   }
 
   @Test public void clear() {
-    assertEquals(0, new SparseBooleanArrayBuilder().put(5, true).clear().build().size());
+    assertThat(new SparseBooleanArrayBuilder().put(5, true).clear().build().size()).isEqualTo(0);
   }
 }

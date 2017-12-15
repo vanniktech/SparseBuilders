@@ -6,8 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 
+import static org.assertj.core.api.Java6Assertions.assertThat;
 import static com.vanniktech.sparsebuilders.asserts.SparseAsserts.assertSparseArrayEquals;
-import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class) public class SparseArrayBuilderTest {
   @Test public void constructorEmptyBuildShouldReturnEmpty() {
@@ -31,9 +31,9 @@ import static org.junit.Assert.assertEquals;
 
     new SparseArrayBuilder<>(fromParameter).put(3, new Date(1)).build();
 
-    assertEquals(1, fromParameter.size());
-    assertEquals(340, fromParameter.keyAt(0));
-    assertEquals(1, fromParameter.valueAt(0).getTime());
+    assertThat(fromParameter.size()).isEqualTo(1);
+    assertThat(fromParameter.keyAt(0)).isEqualTo(340);
+    assertThat(fromParameter.valueAt(0).getTime()).isEqualTo(1);
   }
 
   @Test public void constructorSparseArrayShouldProvideInitialized() {
@@ -54,16 +54,16 @@ import static org.junit.Assert.assertEquals;
     final Date second = new Date(2);
     final SparseArray<Date> sparseArray = new SparseArrayBuilder<Date>().put(5, first).put(8, second).build();
 
-    assertEquals(2, sparseArray.size());
+    assertThat(sparseArray.size()).isEqualTo(2);
 
-    assertEquals(5, sparseArray.keyAt(0));
-    assertEquals(first, sparseArray.valueAt(0));
+    assertThat(sparseArray.keyAt(0)).isEqualTo(5);
+    assertThat(sparseArray.valueAt(0)).isEqualTo(first);
 
-    assertEquals(8, sparseArray.keyAt(1));
-    assertEquals(second, sparseArray.valueAt(1));
+    assertThat(sparseArray.keyAt(1)).isEqualTo(8);
+    assertThat(sparseArray.valueAt(1)).isEqualTo(second);
   }
 
   @Test public void clear() {
-    assertEquals(0, new SparseArrayBuilder<Integer>().put(5, 3).clear().build().size());
+    assertThat(new SparseArrayBuilder<Integer>().put(5, 3).clear().build().size()).isEqualTo(0);
   }
 }

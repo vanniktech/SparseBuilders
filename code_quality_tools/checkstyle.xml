@@ -195,6 +195,36 @@
       <property name="message" value="To reduce the chance of a NPE use ''.equals(var)"/>
     </module>
 
+    <module name="RegexpSinglelineJava">
+      <property name="format" value="import static org\.junit\.Assert\.assertEquals;"/>
+      <property name="message" value="Don't use JUnits assertEquals, AssertJ is prefered: assertThat(foo).isEqualTo();"/>
+    </module>
+
+    <module name="RegexpSinglelineJava">
+      <property name="format" value="import static org\.junit\.Assert\.assertNotEquals;"/>
+      <property name="message" value="Don't use JUnits assertNotEquals, AssertJ is prefered: assertThat(foo).isNotEqualTo();"/>
+    </module>
+
+    <module name="RegexpSinglelineJava">
+      <property name="format" value="import static org\.junit\.Assert\.assertSame;"/>
+      <property name="message" value="Don't use JUnits assertSame, AssertJ is prefered: assertThat(foo).isSameAs();"/>
+    </module>
+
+    <module name="RegexpSinglelineJava">
+      <property name="format" value="import static org\.junit\.Assert\.assertNull;"/>
+      <property name="message" value="Don't use JUnits assertNull, AssertJ is prefered: assertThat(foo).isNull()"/>
+    </module>
+
+    <module name="RegexpSinglelineJava">
+      <property name="format" value="import static org\.junit\.Assert\.assertNotNull;"/>
+      <property name="message" value="Don't use JUnits assertNotNull, AssertJ is prefered: assertThat(foo).isNotNull()"/>
+    </module>
+
+    <module name="RegexpSinglelineJava">
+      <property name="format" value="import static org\.junit\.Assert\.assertNotNull;"/>
+      <property name="message" value="Don't use JUnits assertNotNull, AssertJ is prefered: assertThat(foo).isNotNull()"/>
+    </module>
+
     <module name="IllegalImport">
       <property name="illegalPkgs" value="org.jetbrains.annotations"/>
     </module>

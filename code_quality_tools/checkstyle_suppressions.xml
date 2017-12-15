@@ -5,4 +5,5 @@
 <suppressions>
   <suppress files="[\w]*Test.java" checks="MagicNumberCheck"/>
   <suppress files="[\w]*Test.java" checks="MultipleStringLiterals"/>
+  <suppress files="SparseAsserts.java" checks="RegexpSinglelineJava"/>
 </suppressions>
